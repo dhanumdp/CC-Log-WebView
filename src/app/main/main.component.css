@@ -1,0 +1,47 @@
+
+div{
+    font-family: 'Audiowide', cursive;
+    src: url('../../assets/Fonts/Audiowide-Regular.ttf');
+}
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #D81B60;
+    overflow-x: hidden;
+    transition: 0.5s;
+   
+
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Audiowide', cursive;
+    src: url('../../assets/Fonts/Audiowide-Regular.ttf');
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #D81B60;
+    background-color: #fff;
+    cursor:pointer;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+      }  
+
+      #grad {
+        height:150px;
+        overflow: hidden;
+        background-image:  linear-gradient(to top, #d81b60, #e35070, #ec7384, #f49399, #fab2b2);
+    }

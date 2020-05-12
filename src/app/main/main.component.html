@@ -1,0 +1,47 @@
+
+<div *ngIf="!loggedIn" class="card"  >
+<div class="card-body" style="background-color: #D81B60; text-align: center;">
+    <p style="color: white;">Illegal Access !! You Shoud Login to access it</p>
+</div>
+</div>
+
+<div *ngIf="loggedIn">
+    <div id="mySidenav" style="width: 250px;" class="sidenav">
+        <div id="grad">
+            <div style="text-align: center;">
+                <div style="margin-top: 10%;">
+                    <i class="fa fa-user fa-5x" style="color:#fff;" aria-hidden="true"></i>
+                </div>
+                
+            </div>
+           <div  style="text-align: center; margin-top: 3%;">
+                    <h5 style="color: #fff;">{{username}}</h5>
+           </div>
+        </div>
+        
+           <hr>
+           <div style="margin-top: 5%;  text-align: left;">
+            
+            <a (click)="showAttendance()"> <i class="fa fa-check-square-o" aria-hidden="true"  ></i> Attendance</a>
+            <a (click)="showComplaints()"> <i class="fa fa-spin fa-cog" aria-hidden="true"></i> Complaints </a>
+            <a (click)="addAdmin()"><i class="fa fa-user-plus" aria-hidden="true"></i>  Add Admin </a>
+            <a (click)="showMainContent()"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <a (click)="Logout()"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+           </div>
+          </div> 
+      
+          <div *ngIf="displayMainContent" style="margin-left: 270px;">
+            <app-main-content></app-main-content>
+        </div>      
+    <div *ngIf="displayAttendance" style="margin-left: 270px;">
+                <app-attendance></app-attendance>
+    </div>
+    <div *ngIf="displayComplaints" style="margin-left: 270px;">
+                <app-complaints></app-complaints>
+    </div>
+    <div *ngIf="displayAdmin" style="margin-left: 270px;">
+                <app-add-admin></app-add-admin>
+    </div>
+    
+</div>
+

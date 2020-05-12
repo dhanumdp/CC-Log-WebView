@@ -1,0 +1,18 @@
+#grad {
+    height: 100vh;
+    background-image:  linear-gradient(to top, #d81b60, #e35070, #ec7384, #f49399, #fab2b2);
+    overflow: hidden;
+}
+div{
+    font-family: 'Audiowide', cursive;
+    
+    src: url('../../assets/Fonts/Audiowide-Regular.ttf');
+}
+
+
+
+@media only screen and (min-width:1281px){
+    .container{
+        width: 35%;
+    }
+}
