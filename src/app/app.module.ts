@@ -11,6 +11,7 @@ import { AttendanceComponent } from './attendance/attendance.component';
 import { ComplaintsComponent } from './complaints/complaints.component';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MainContentComponent } from './main-content/main-content.component';
     AttendanceComponent,
     ComplaintsComponent,
     AddAdminComponent,
-    MainContentComponent
+    MainContentComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,

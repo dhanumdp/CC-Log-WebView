@@ -14,6 +14,7 @@ export class MainComponent implements OnInit {
   displayComplaints : boolean;
   displayMainContent : boolean;
   displayAdmin:boolean;
+  displayChangePassword :boolean;
   localStorageValue;
   loggedIn : boolean;
   username : any;
@@ -35,14 +36,14 @@ export class MainComponent implements OnInit {
       this.username=localStorage.getItem('user').replace(/['"]+/g, '');
     }
     
-    this.displayAttendance=false;
-    this.displayComplaints=false;
+    
   }
 
   showMainContent()
   {
     this.displayAttendance=false;
     this.displayComplaints=false;
+    this.displayChangePassword=false;
     this.displayAdmin=false;
     this.displayMainContent=true;
   }
@@ -52,6 +53,8 @@ export class MainComponent implements OnInit {
     this.displayAttendance=true;
     this.displayComplaints=false;
     this.displayAdmin=false;
+
+    this.displayChangePassword=false;
     this.displayMainContent=false;
   }
   showComplaints()
@@ -59,7 +62,17 @@ export class MainComponent implements OnInit {
     this.displayComplaints=true;
     this.displayAttendance=false;
     this.displayAdmin=false;
+    this.displayChangePassword=false;
     this.displayMainContent=false;
+  }
+  showChangePassword()
+  {
+    this.displayAttendance=false;
+    this.displayComplaints=false;
+    this.displayAdmin=false;
+    this.displayMainContent=false;
+    this.displayChangePassword=true;
+    
   }
   addAdmin()
   {
@@ -67,6 +80,7 @@ export class MainComponent implements OnInit {
     this.displayComplaints=false;
     this.displayAdmin=true;
     this.displayMainContent=false;
+    this.displayChangePassword=false;
   }
   Logout()
   {

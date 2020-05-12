@@ -26,13 +26,14 @@
             <a (click)="showComplaints()"> <i class="fa fa-spin fa-cog" aria-hidden="true"></i> Complaints </a>
             <a (click)="addAdmin()"><i class="fa fa-user-plus" aria-hidden="true"></i>  Add Admin </a>
             <a (click)="showMainContent()"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <a (click)="showChangePassword()"> <i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Password</a>
             <a (click)="Logout()"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
            </div>
           </div> 
       
-          <div *ngIf="displayMainContent" style="margin-left: 270px;">
+    <div *ngIf="displayMainContent" style="margin-left: 270px;">
             <app-main-content></app-main-content>
-        </div>      
+     </div>      
     <div *ngIf="displayAttendance" style="margin-left: 270px;">
                 <app-attendance></app-attendance>
     </div>
@@ -42,6 +43,9 @@
     <div *ngIf="displayAdmin" style="margin-left: 270px;">
                 <app-add-admin></app-add-admin>
     </div>
+    <div *ngIf="displayChangePassword" style="margin-left: 270px;">
+        <app-changepassword></app-changepassword>
+</div>
     
 </div>
 

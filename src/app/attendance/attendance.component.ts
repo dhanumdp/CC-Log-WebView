@@ -12,4 +12,8 @@ export class AttendanceComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  print(value:String)
+  {
+    console.log(value)
+  }
 }
