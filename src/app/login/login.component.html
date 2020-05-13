@@ -12,7 +12,7 @@
           </div>
           
           <form [formGroup] = "form" style="margin-top:30%;" (submit)="onFormSubmit()">
-            <h1 style="text-align: center;">MCA CC LAB</h1>
+            <h1 style="text-align: center; color: black;">MCA CC LAB</h1>
               <div class="form-group" style="margin-top: 10%;">
                   <div [ngClass]="{'has-error':('form.controls.username.errors && form.controls.username.dirty'), 'has-success':'!form.controls.username.errors'}">
                       <input type="text" name="username" class="form-control" autocomplete="off" placeholder="Username" formControlName="username" />
