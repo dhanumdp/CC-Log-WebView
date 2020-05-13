@@ -21,12 +21,11 @@
         
            <hr>
            <div style="margin-top: 5%;  text-align: left;">
-            
-            <a (click)="showAttendance()"> <i class="fa fa-check-square-o" aria-hidden="true"  ></i> Attendance</a>
-            <a (click)="showComplaints()"> <i class="fa fa-spin fa-cog" aria-hidden="true"></i> Complaints </a>
-            <a (click)="addAdmin()"><i class="fa fa-user-plus" aria-hidden="true"></i>  Add Admin </a>
-            <a (click)="showMainContent()"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
-            <a (click)="showChangePassword()"> <i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Password</a>
+            <a (click)="showMainContent()" [ngClass]="{ 'is-active': this.displayMainContent }"> <i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            <a (click)="showAttendance()" [ngClass]="{ 'is-active': this.displayAttendance }"> <i class="fa fa-check-square-o" aria-hidden="true"  ></i> Attendance</a>
+            <a (click)="showComplaints()" [ngClass]="{ 'is-active': this.displayComplaints }" > <i class="fa fa-spin fa-cog" aria-hidden="true"></i> Complaints </a>
+            <a (click)="addAdmin()" [ngClass]="{ 'is-active': this.displayAdmin }"><i class="fa fa-user-plus" aria-hidden="true"></i>  Add Admin </a>
+            <a (click)="showChangePassword()" [ngClass]="{ 'is-active': this.displayChangePassword }"> <i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Password</a>
             <a (click)="Logout()"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
            </div>
           </div> 

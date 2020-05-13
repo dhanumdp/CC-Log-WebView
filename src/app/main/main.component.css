@@ -11,6 +11,7 @@ div{
     z-index: 1;
     top: 0;
     left: 0;
+    box-shadow: 10px 10px 10px #F4F2F1;
     background-color: #D81B60;
     overflow-x: hidden;
     transition: 0.5s;
@@ -35,6 +36,12 @@ div{
     cursor:pointer;
   }
 
+
+  .sidenav a.is-active {
+      background: #fff; 
+       color: #D81B60;
+  }
+
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -45,3 +52,5 @@ div{
         overflow: hidden;
         background-image:  linear-gradient(to top, #d81b60, #e35070, #ec7384, #f49399, #fab2b2);
     }
+
+

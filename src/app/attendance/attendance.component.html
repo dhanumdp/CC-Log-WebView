@@ -7,16 +7,9 @@
 
     </div>
    
-    <div style=" margin-top: 5%;">
-        <div style="text-align: center;" class="row show-hide-message ">
-          <div class="row show-hide-message">
-              <div [ngClass]="messageclass">
-                  {{message}}
-              </div>
-          </div>
-      </div>
+ 
       <div *ngIf="attendanceService.attendanceList">
-        <table class="table table-striped " style="background-color: #D81B60;">
+        <table class="table table-striped " style="background-color: #D81B60; margin-top: 2%;">
             <thead style="color: #fff;">
               <tr>
                 <th scope="col">S.No</th>
@@ -26,7 +19,18 @@
                 <th scope="col">Check Out</th>
               </tr>
             </thead>
-            <tbody *ngFor="let data of attendanceService.attendanceList" style="color: #D81B60; background-color: #fff;">
+            <tbody *ngIf="message">
+              <tr *ngIf="message">
+                <td></td>
+                <td></td>
+                <td style="text-align: right;  color: #fff;">No Records Found</td>
+                <td></td>
+                <td></td>
+                 </tr>
+            </tbody>
+
+            <tbody  *ngFor="let data of attendanceService.attendanceList" style="color: #D81B60; background-color: #fff;">
+              
               <tr>
                 <td>{{attendanceService.attendanceList.indexOf(data)+1}}</td>
                 <td>{{data.rollno}}</td>

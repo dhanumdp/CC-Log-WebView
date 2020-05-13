@@ -16,7 +16,17 @@ export class ComplaintsService {
 
   getList()
   {
+    return this.http.get(`${this.URL}`+'/getComplaintList');
+  }
 
+  updateComplaint(id)
+  {
+      return this.http.get(`${this.URL}`+'/updateComplaint/'+`${id}`);
+  }
+  
+  deleteComplaint(id)
+  { 
+    return this.http.get(`${this.URL}`+'/deleteComplaint/'+`${id}`);
   }
 
 }

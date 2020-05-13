@@ -27,6 +27,7 @@ export class AttendanceComponent implements OnInit {
      if(res['success'])
      {
       this.attendanceService.attendanceList=res['data'];
+      this.message=null;
        
      }
      else
